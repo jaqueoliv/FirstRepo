@@ -17,11 +17,20 @@ body {
   font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
+  font-family: "Playfair Display SC", serif;
+  color: #DB2780;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none !important;
+}
+
+h3, h4, h5, h6 {
   font-family: "Playfair Display SC", serif;
   color: #DB2780;
   font-weight: 400;
   letter-spacing: 0.02em;
+  text-transform: none !important;
 }
 
 .container {

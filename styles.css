@@ -10,20 +10,24 @@ html {
 }
 
 body {
-  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #fdf2f8;
-  color: #1f2937;
-  line-height: 1.6;
+  font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0A0A0A;
+  color: #E5E7EB;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "DM Serif Display", serif;
+  font-family: "Playfair Display SC", serif;
+  color: #e11d48;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
 /* Hero */
@@ -36,50 +40,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: 0.5rem;
-  color: #831843;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  margin-bottom: 0.6rem;
+  color: #E5E7EB;
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: #9d174d;
-  margin-bottom: 1.5rem;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: #e11d48;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 2.5rem;
 }
 
 .links a {
   display: inline-block;
-  margin: 0.4rem 0.6rem;
-  padding: 0.5rem 1.2rem;
-  border-radius: 999px;
-  border: 1px solid #f9a8d4;
-  color: #831843;
+  margin: 0.5rem 0.8rem;
+  padding: 0.65rem 1.6rem;
+  border-radius: 0;
+  background-color: #18181B;
+  color: #E5E7EB;
   text-decoration: none;
-  font-size: 0.95rem;
-  background-color: #fce7f3;
-  transition: background-color 0.2s, transform 0.2s;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .links a:hover {
-  background-color: #fbcfe8;
-  transform: translateY(-2px);
+  background-color: #e11d48;
+  color: #FFFFFF;
+  border-color: #e11d48;
 }
 
 /* Sections */
 section:not(#hero) {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #831843;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
 }
 
 p {
   max-width: 60ch;
-  color: #374151;
-  margin-bottom: 1rem;
+  color: #D1D5DB;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Tech stack */
@@ -87,54 +98,57 @@ p {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
 }
 
 .stack li {
-  background-color: #fce7f3;
+  background-color: transparent;
+  border: 1px solid #e11d48;
   padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  color: #831843;
+  font-size: 0.8rem;
+  color: #e11d48;
+  letter-spacing: 0.08em;
 }
 
 /* Projects */
 .cards {
   display: grid;
-  gap: 1.2rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 1rem;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 1.5rem;
 }
 
 .card {
-  background-color: #ffffff;
-  border: 1px solid #fce7f3;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 8px rgba(157, 23, 77, 0.06);
-  transition: transform 0.2s;
+  background-color: #0A0A0A;
+  border: 1px solid #27272A;
+  padding: 1.6rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
+  border-color: #e11d48;
 }
 
 .card h3 {
-  margin-bottom: 0.5rem;
-  color: #831843;
+  margin-bottom: 0.6rem;
+  color: #E5E7EB;
+  font-size: 1.35rem;
 }
 
 .card p {
-  font-size: 0.95rem;
-  color: #6b7280;
-  margin-bottom: 0.75rem;
+  font-size: 0.92rem;
+  color: #9CA3AF;
+  margin-bottom: 1rem;
 }
 
 .card a {
-  color: #db2777;
+  color: #e11d48;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .card a:hover {
@@ -145,13 +159,15 @@ p {
 .social {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
 }
 
 .social a {
-  color: #db2777;
+  color: #e11d48;
   text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
 }
 
 .social a:hover {
@@ -161,7 +177,8 @@ p {
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem 0 1rem;
-  font-size: 0.85rem;
-  color: #9ca3af;
+  padding: 2.5rem 0 1.5rem;
+  font-size: 0.8rem;
+  color: #6B7280;
+  letter-spacing: 0.04em;
 }

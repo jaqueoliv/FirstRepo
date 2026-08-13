@@ -1,82 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jaque — Página Pessoal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO e Meta Tags -->
+    <title>Jaqueline Oliveira | Product Designer UX/UI</title>
+    <meta name="description" content="Portfólio de Jaqueline Oliveira, Product Designer especializada em UX/UI e Landing Pages focadas em conversão e estratégia visual.">
+    <meta name="author" content="Jaqueline Oliveira">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jaqueline Oliveira | Product Designer UX/UI">
+    <meta property="og:description" content="Construo design que entende o usuário e converte o interesse em ação.">
+    <meta property="og:image" content="imagens/thumb-social.jpg">
 
-  <!-- Fonts: DM Serif Display (títulos) + DM Sans (texto) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Hero -->
-    <section id="hero">
-      <h1>Olá, sou a Jaque 👋</h1>
-      <p class="subtitle">UX/UI Designer</p>
-      <nav class="links">
-        <a href="#about">Sobre mim</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
-      </nav>
-    </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>Sobre mim</h2>
-      <p>
-        Olá! Sou a Jaque, UX/UI Designer, crio sites bonitos e estratégicos para transformar visitantes em clientes.
-      </p>
-      <ul class="stack">
-        <li>HTML / CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Git</li>
-      </ul>
-    </section>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><span class="logo-name">Jaque</span><span class="logo-lastname"> Oliveira</span></div>
+        <nav>
+            <ul>
+                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="#projetos">VER PROJETOS</a></li>
+                <li><a href="https://www.behance.net/jaquelioliveir7" target="_blank">BEHANCE</a></li>
+                <li><a href="https://linkedin.com" target="_blank">LINKEDIN</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projetos</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Projeto Um</h3>
-          <p>Uma breve descrição do seu primeiro projeto vai aqui.</p>
-          <a href="#">Ver mais →</a>
-        </article>
-        <article class="card">
-          <h3>Projeto Dois</h3>
-          <p>Uma breve descrição do seu segundo projeto vai aqui.</p>
-          <a href="#">Ver mais →</a>
-        </article>
-      </div>
-    </section>
+    <main class="container">
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contato</h2>
-      <p>Tem alguma dúvida ou quer colaborar? Sinta-se à vontade para me chamar.</p>
-      <ul class="social">
-        <li><a href="mailto:your.email@example.com">Email</a></li>
-        <li><a href="https://github.com" target="_blank">GitHub</a></li>
-        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-      </ul>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <p class="greeting">Olá, sou Jaqueline</p>
+                    <h1>Product Designer</h1>
+                    <h2>UX/UI & LANDING PAGES</h2>
+                    <p class="hero-description">Construo design que entende o usuário e converte o interesse em ação.</p>
+                    <a href="https://wa.me/5541995198465" target="_blank" class="btn btn-dark">Vamos conversar</a>
+                </div>
+                <div class="hero-image">
+                    <img src="imagens/foto-jaque.jpg" alt="Foto de Jaqueline Oliveira, Product Designer UX/UI">
+                </div>
+            </div>
+        </section>
+
+        <!-- Como eu trabalho -->
+        <section class="process-section">
+            <div class="process-content">
+                <div class="process-intro">
+                    <h2>Como eu trabalho</h2>
+                    <p>Cada projeto começa com uma pergunta: o que precisa acontecer quando alguém chegar nessa página?</p>
+                    <p>Estudo o público, o objetivo do negócio e o comportamento de quem vai navegar. A partir disso, estruturo layout, hierarquia e chamadas que guiam o usuário até a ação certa.</p>
+                    <p>O resultado é uma experiência bem otimizada que une boa usabilidade à estratégia de conversão.</p>
+                </div>
+                <div class="process-grid">
+                    <!-- Card 1 - Pesquisa -->
+                    <article class="process-card">
+                        <img src="imagens/icone-pesquisa.svg" alt="Pesquisa & Estratégia" class="process-icon-img">
+                        <h3>Pesquisa & Estratégia</h3>
+                        <p>Pesquiso intenção e comportamento do usuário para entender suas necessidades antes de definir a estrutura visual.</p>
+                    </article>
+
+                    <!-- Card 2 - Identidade Visual -->
+                    <article class="process-card">
+                        <img src="imagens/icone-visual.svg" alt="Identidade Visual" class="process-icon-img">
+                        <h3>Identidade visual</h3>
+                        <p>Logotipo, paleta de cores e elementos visuais pensados pra transmitir a essência do seu negócio.</p>
+                    </article>
+
+                    <!-- Card 3 - Design focado em conversão -->
+                    <article class="process-card">
+                        <img src="imagens/icone-conversao.svg" alt="Design Focado em Conversão" class="process-icon-img">
+                        <h3>Design focado em conversão</h3>
+                        <p>Hierarquia visual, copy estrutural e chamadas construídas pra guiar o usuário até a ação.</p>
+                    </article>
+
+                    <!-- Card 4 - SEO Integrado -->
+                    <article class="process-card">
+                        <img src="imagens/icone-estrela.svg" alt="SEO Integrado" class="process-icon-img">
+                        <h3>SEO integrado</h3>
+                        <p>Estruturação focada em código limpo e carregamento rápido que ajudam na performance do site.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="projects-section">
+            <h2>Projetos</h2>
+            <p class="section-subtitle">Confira o processo criativo e a intenção estratégica por trás de cada projeto.</p>
+
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <article class="project-card">
+                    <img src="imagens/projeto-bumio.png" alt="Interface do aplicativo Bumio">
+                    <div class="project-info">
+                        <h3>Bumio - Aplicativo de jogos</h3>
+                        <p class="project-tagline">Plataforma mobile para jogos independentes<br>Interface pensada pra equilibrar dois lados: jogadores explorando novidades e desenvolvedores ganhando visibilidade.</p>
+                        <a href="https://www.behance.net/jaquelioliveir7" target="_blank" class="project-link">Ver case completo →</a>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="project-card">
+                    <img src="imagens/projeto-confeitaria.png" alt="Landing page Bolos que Vendem">
+                    <div class="project-info">
+                        <h3>Landing Page - Bolos que Vendem</h3>
+                        <p class="project-tagline">Página de inscrição para workshop<br>Criei um fluxo com o mínimo de atrito possível: poucos cliques, dúvidas principais respondidas pra gerar leads qualificados.</p>
+                        <a href="https://www.behance.net/jaquelioliveir7" target="_blank" class="project-link">Ver case completo →</a>
+                    </div>
+                </article>
+
+                <!-- Projeto 3 -->
+                <article class="project-card">
+                    <img src="imagens/projeto-move.png" alt="Landing page Empresa de Mudanças">
+                    <div class="project-info">
+                        <h3>Landing Page - Empresa de Mudanças</h3>
+                        <p class="project-tagline">Página institucional para serviço de mudanças<br>O foco era simplificar a decisão do visitante: processo intuitivo e formulário direto, pensados pra aumentar a taxa de contato.</p>
+                        <a href="https://www.behance.net/jaquelioliveir7" target="_blank" class="project-link">Ver case completo →</a>
+                    </div>
+                </article>
+
+                <!-- Projeto 4 -->
+                <article class="project-card">
+                    <img src="imagens/projeto-gooday.png" alt="Landing page do projeto Gooday">
+                    <div class="project-info">
+                        <h3>Gooday - Aplicativo de vida saudável</h3>
+                        <p class="project-tagline">App de saúde e bem-estar<br>Experiência com comunidade, opções de restaurantes por perto e ganhos da motivação pra transformar intenção em rotina.</p>
+                        <a href="https://www.behance.net/jaquelioliveir7" target="_blank" class="project-link">Ver case completo →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-center-btn">
+                <a href="https://www.behance.net/jaquelioliveir7" target="_blank" class="btn btn-pink">Ver todos os projetos</a>
+            </div>
+        </section>
+
+        <!-- Sobre mim -->
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Sobre mim</h2>
+                <p>Sou Product Designer: a partir de pesquisas e fundamentos de psicologia aplicada ao comportamento do usuário, traduzo necessidades em interfaces visualmente estratégicas.</p>
+                <p>Minha formação especializada me permite otimizar plataformas digitais para <strong>fortalecer a comunicação</strong> e o relacionamento do seu negócio com o público, aplicando todo o ciclo criativo desde a pesquisa profunda com usuários até a prototipação de alta fidelidade e testes práticos.</p>
+                <p>A atenção estratégica aos detalhes é meu diferencial: cada hierarquia visual e botão são pensados para gerar confiança na sua marca e facilitar o entendimento imediato da informação, eu crio soluções que equilibram apelo emocional e função técnica com naturalidade.</p>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h2>Como posso te ajudar?</h2>
+                    <p>Se você tem um desafio para tirar do papel ou busca parceria, escreve aí. Estou aberta para novos projetos e pronta para pensar junto com você.</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu email" required>
+                    <textarea rows="5" placeholder="Mensagem" required></textarea>
+                    <button type="submit" class="btn btn-dark">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; 2026 Jaque. Feito com ❤️.</p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>Jaqueline Oliveira &nbsp;·&nbsp; Product Designer &nbsp;·&nbsp; jaque.rx@gmail.com &nbsp;·&nbsp; 2026</p>
+            <div class="footer-links">
+                <a href="https://www.behance.net/jaquelioliveir7" target="_blank">BEHANCE</a>
+                <a href="https://wa.me/5541995198465" target="_blank">WHATSAPP</a>
+                <a href="mailto:jaque.rx@gmail.com">EMAIL</a>
+            </div>
+        </div>
     </footer>
-  </div>
+
 </body>
 </html>
-
-/* TRAVA OS TÍTULOS NO NORMAL */
-h1, h2, h3 {
-  text-transform: none !important;
-}

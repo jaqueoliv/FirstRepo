@@ -34,25 +34,27 @@ a:hover { opacity: 0.8; }
     max-width: 100%; /* Não limita a tela inteira */
 }
 
-/* --- Navbar (Agora ela estica 100% da largura) --- */
+/* --- Navbar com Fundo Esticado ao Máximo --- */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;               /* Garante que ocupa toda a horizontal */
-    max-width: none;           /* Remove qualquer limite de largura */
-    margin: 0;                 /* Remove margens laterais indesejadas */
+    
+    width: 100%;           /* Ocupa TUDO na horizontal */
+    max-width: none;       /* Remove qualquer limite escondido */
+    margin-left: 0;        /* Garante margem zero à esquerda */
+    margin-right: 0;       /* Garante margem zero à direita */
+    
     padding-top: 24px;
     padding-bottom: 24px;
-    background-color: #1a0a0f; /* Fundo ocupando tudo */
+    background-color: #1a0a0f;
 }
 
 .navbar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1400px; /* Só limita o conteúdo dentro dela, não o fundo */
+    max-width: 1400px; /* Só limita o conteúdo dentro dela */
     margin-left: auto;
     margin-right: auto;
     padding-left: 190px;
@@ -60,7 +62,7 @@ a:hover { opacity: 0.8; }
 }
 
 .logo {
-    font-family: var(--font-heading);
+    font-family: 'Cookie', cursive;
     font-size: 1.5rem;
     color: var(--text-white);
     letter-spacing: -0.5px;
@@ -86,16 +88,18 @@ a:hover { opacity: 0.8; }
     text-transform: uppercase;
 }
 
-/* --- Hero Section - com degradê rosa esticado nas bordas --- */
+/* --- Hero Section - Esticada ao Máximo com Arredondamento Abaixo --- */
 .hero {
-    width: 100%; /* Ocupa toda a largura da tela */
-    max-width: none; /* Remove qualquer limite */
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;             /* Ocupa TUDO na horizontal */
+    max-width: none;         /* Remove qualquer limite escondido */
+    margin-left: 0;          /* Garante margem zero à esquerda */
+    margin-right: 0;         /* Garante margem zero à direita */
+    
     padding-left: 190px;
     padding-right: 190px;
     padding-top: 60px;
     padding-bottom: 120px;
+    
     background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%); /* Gradiente exato do protótipo */
     border-radius: 0 0 20px 20px; /* Arredondamento de 20px apenas nas bordas inferiores */
 }
@@ -105,8 +109,9 @@ a:hover { opacity: 0.8; }
     align-items: center;
     justify-content: space-between;
     gap: 80px;
-    max-width: 1600px;
-    margin: 0 auto;
+    max-width: 1400px; /* Só limita o conteúdo dentro dela */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-text {

@@ -95,8 +95,8 @@ a:hover { opacity: 0.8; }
     
     padding-left: 190px;
     padding-right: 190px;
-    padding-top: 60px;
-    padding-bottom: 120px;
+    padding-top: 40px;       /* Menor no topo */
+    padding-bottom: 80px;    /* Menor embaixo pra ficar mais compacto verticalmente */
     
     background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%); /* Gradiente exato do protótipo */
     border-radius: 0 0 20px 20px; /* Arredondamento de 20px apenas nas bordas inferiores */
@@ -104,16 +104,14 @@ a:hover { opacity: 0.8; }
 
 .hero-inner {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 80px;
-    max-width: 1400px; /* Só limita o conteúdo dentro dela */
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center; /* Centraliza os textos verticalmente */
+    gap: 40px;
+    width: 100%; /* Mesma largura usada pelo resto do conteúdo */
 }
 
 .hero-text {
-    max-width: 520px;
+    max-width: none; /* Usa todo o espaço disponível à esquerda */
+    flex-basis: 40%; /* Ocupa menos espaço pra foto poder ser maior */
 }
 
 .greeting {
@@ -148,11 +146,21 @@ a:hover { opacity: 0.8; }
     line-height: 1.7;
 }
 
+/* Garante que a foto fique grande e ocupando do topo até o fundo da hero */
+.hero-image {
+    flex-basis: 58%;       /* Mais espaço para a foto ficar bem grande */
+    text-align: right;
+    height: 100%;          /* Ocupa toda a altura disponível na hero */
+    display: flex;         /* Facilita alinhar a imagem */
+    align-items: center;   /* Centraliza verticalmente dentro da seção */
+}
+
 .hero-image img {
-    width: 420px;
-    height: auto;
+    width: 100%;           /* Ocupa tudo que tem à direita */
+    max-width: 650px;      /* Aumenta bastante o tamanho da foto */
+    height: auto;          /* Mantém proporção */
     border-radius: 0;
-    object-fit: cover;
+    object-fit: cover;     /* Preenche bem sem distorcer */
 }
 
 /* --- Botões com Drop Shadow --- */

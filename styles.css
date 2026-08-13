@@ -27,21 +27,24 @@ body {
 a { color: inherit; text-decoration: none; transition: opacity 0.3s ease; }
 a:hover { opacity: 0.8; }
 
+/* Container só para conteúdo principal — não afeta header */
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 190px;
+    padding-right: 190px;
+    max-width: 100%; /* Não limita a tela inteira */
 }
 
-/* --- Navbar --- */
+/* --- Navbar (Agora ela estica 100% da largura) --- */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;               /* Garante que ocupa toda a horizontal */
+    max-width: none;           /* Remove qualquer limite de largura */
+    margin: 0;                 /* Remove margens laterais indesejadas */
     padding-top: 24px;
     padding-bottom: 24px;
-    background-color: #1a0a0f; /* Tom muito escuro com leve rosado */
+    background-color: #1a0a0f; /* Fundo ocupando tudo */
 }
 
 .navbar-inner {
@@ -49,11 +52,11 @@ a:hover { opacity: 0.8; }
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1400px; /* Só limita o conteúdo dentro dela, não o fundo */
     margin-left: auto;
     margin-right: auto;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 190px;
+    padding-right: 190px;
 }
 
 .logo {
@@ -85,12 +88,16 @@ a:hover { opacity: 0.8; }
 
 /* --- Hero Section - com degradê rosa esticado nas bordas --- */
 .hero {
-    display: block; /* Estica nas bordas, sem margin do container */
-    padding-left: 120px;
-    padding-right: 120px;
+    width: 100%; /* Ocupa toda a largura da tela */
+    max-width: none; /* Remove qualquer limite */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 190px;
+    padding-right: 190px;
     padding-top: 60px;
     padding-bottom: 120px;
     background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%); /* Gradiente exato do protótipo */
+    border-radius: 0 0 20px 20px; /* Arredondamento de 20px apenas nas bordas inferiores */
 }
 
 .hero-inner {
@@ -98,7 +105,7 @@ a:hover { opacity: 0.8; }
     align-items: center;
     justify-content: space-between;
     gap: 80px;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -427,7 +434,8 @@ a:hover { opacity: 0.8; }
 /* --- Footer --- */
 .footer {
     background-color: #050505;
-    padding: 32px 120px;
+    width: 100%;
+    padding: 32px 190px;
     border-top: 1px solid #141414;
 }
 
@@ -435,6 +443,8 @@ a:hover { opacity: 0.8; }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .footer p {
@@ -459,16 +469,15 @@ a:hover { opacity: 0.8; }
 /* --- Responsividade --- */
 @media (max-width: 1200px) {
     .container { padding-left: 60px; padding-right: 60px; }
-    .navbar { padding: 24px 60px; }
+    .navbar-inner { padding-left: 60px; padding-right: 60px; }
+    .hero { padding-left: 60px; padding-right: 60px; }
     .footer { padding: 32px 60px; }
-    .hero { gap: 40px; }
-    .hero h1 { font-size: 3rem; }
-    .hero-image img { width: 350px; }
 }
 
 @media (max-width: 900px) {
     .container { padding-left: 32px; padding-right: 32px; }
-    .navbar { padding: 20px 32px; flex-direction: column; gap: 16px; }
+    .navbar-inner { padding-left: 32px; padding-right: 32px; flex-direction: column; gap: 16px; }
+    .hero { padding-left: 32px; padding-right: 32px; }
     .footer { padding: 24px 32px; flex-direction: column; gap: 12px; }
     
     .hero {

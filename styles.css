@@ -96,7 +96,7 @@ a:hover { opacity: 0.8; }
     padding-left: 190px;
     padding-right: 190px;
     padding-top: 36px;       /* Menor ainda no topo */
-    padding-bottom: 24px;    /* Bem menor embaixo para encostar quase na foto */
+    padding-bottom: 0px;    /* Zero embaixo para encostar totalment na foto */
     
     background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%); /* Gradiente exato do protótipo */
     border-radius: 0 0 20px 20px; /* Arredondamento de 20px apenas nas bordas inferiores */

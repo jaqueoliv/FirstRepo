@@ -39,11 +39,21 @@ a:hover { opacity: 0.8; }
     position: sticky;
     top: 0;
     z-index: 100;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: #1a0a0f; /* Tom muito escuro com leve rosado */
+}
+
+.navbar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 120px;
-    background-color: #1a0a0f; /* Tom muito escuro com leve rosado */
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .logo {
@@ -80,7 +90,7 @@ a:hover { opacity: 0.8; }
     padding-right: 120px;
     padding-top: 60px;
     padding-bottom: 120px;
-    background: linear-gradient(135deg, #CE5B78 0%, #A43A58 100%); /* Rosa degradê do protótipo */
+    background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%); /* Gradiente exato do protótipo */
 }
 
 .hero-inner {

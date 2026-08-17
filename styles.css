@@ -86,6 +86,13 @@ a:hover { opacity: 0.8; }
     text-transform: uppercase;
 }
 
+/* Hover rosa só nos links da navbar e do footer */
+.navbar nav ul a:hover,
+.footer-links a:hover {
+    color: #F23B69;
+    opacity: 1; /* Cancela o fade global de a:hover pra cor sólida */
+}
+
 /* --- Hero Section - Esticada ao Máximo com Arredondamento Abaixo --- */
 .hero {
     width: 100%;             /* Ocupa TUDO na horizontal */

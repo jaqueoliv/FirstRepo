@@ -92,17 +92,32 @@ a:hover { opacity: 0.8; }
     max-width: none;         /* Remove qualquer limite escondido */
     margin-left: 0;          /* Garante margem zero à esquerda */
     margin-right: 0;         /* Garante margem zero à direita */
+    position: relative;
     
     padding-left: 190px;
     padding-right: 190px;
     padding-top: 48px;       /* Espaço no topo */
-    padding-bottom: 0;       /* Zero embaixo — fundo termina exatamente na base da foto */
+    padding-bottom: 0;
     
-    background: linear-gradient(to right, #CE5B78 0%, #682E3D 100%); /* Degradê horizontal suave */
-    border-radius: 0 0 40px 40px; /* Arredondamento de 40px apenas nas bordas inferiores */
+    /* Fundo escuro (mesma cor da seção de processo) preenche os cantos vazios da curvatura,
+       sem mostrar o preto da página nas bordas arredondadas */
+    background-color: #141414;
+}
+
+/* Degradê rosa com o arredondamento — fica por cima do fundo escuro,
+   preservando a curvatura bonita e preenchendo as curvas com a cor escura */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #CE5B78 0%, #682E3D 100%);
+    border-radius: 0 0 40px 40px;
+    z-index: 0;
 }
 
 .hero-inner {
+    position: relative;      /* Conteúdo (texto + foto) acima do degradê */
+    z-index: 1;
     display: flex;
     align-items: center; /* Centraliza textos verticalmente no retângulo rosa */
     gap: 40px;
@@ -205,6 +220,7 @@ a:hover { opacity: 0.8; }
 .process-section {
     width: 100%;
     background-color: #141414; /* Cinza bem escuro, ocupa toda a largura */
+    margin-top: 0;             /* Colado imediatamente abaixo do hero, sem margem */
     padding-top: 88px;         /* Distância vertical em cima do título */
     padding-bottom: 88px;      /* Distância vertical embaixo do último texto */
     padding-left: 190px;       /* Mesmo alinhamento horizontal dos textos abaixo */
@@ -213,11 +229,12 @@ a:hover { opacity: 0.8; }
 
 .process-content {
     display: flex;
-    gap: 40px;
+    align-items: center;       /* Centraliza o bloco de texto em relação ao grid de ícones */
+    gap: 96px;                 /* Gap maior: encolhe as colunas da grade → linhas de texto mais curtas */
 }
 
 .process-intro {
-    width: 35%;
+    width: 320px;              /* Largura compacta, sem esticar o texto */
     flex-shrink: 0;
 }
 
@@ -505,6 +522,7 @@ a:hover { opacity: 0.8; }
     .container { padding-left: 60px; padding-right: 60px; }
     .navbar-inner { padding-left: 60px; padding-right: 60px; }
     .hero { padding-left: 60px; padding-right: 60px; }
+    .process-section, .contact-section { padding-left: 60px; padding-right: 60px; }
     .footer { padding: 32px 60px; }
 }
 
@@ -512,6 +530,7 @@ a:hover { opacity: 0.8; }
     .container { padding-left: 32px; padding-right: 32px; }
     .navbar-inner { padding-left: 32px; padding-right: 32px; flex-direction: column; gap: 16px; }
     .hero { padding-left: 32px; padding-right: 32px; }
+    .process-section, .contact-section { padding-left: 32px; padding-right: 32px; }
     .footer { padding: 24px 32px; flex-direction: column; gap: 12px; }
     
     .hero {

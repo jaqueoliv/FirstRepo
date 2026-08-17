@@ -371,6 +371,11 @@ a:hover { opacity: 0.8; }
     margin-bottom: 16px;
 }
 
+.project-tagline strong {
+    color: #1a1a1a; /* Primeira linha da descrição em preto */
+    font-weight: 600;
+}
+
 .project-link {
     color: #333333;
     font-weight: 600;

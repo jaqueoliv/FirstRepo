@@ -314,8 +314,8 @@ a:hover { opacity: 0.8; }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px; /* Espaçamento uniforme entre as colunas e linhas de cards */
 }
 
 .project-card {
@@ -323,6 +323,7 @@ a:hover { opacity: 0.8; }
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--off-white-bg); /* Fundo claro */
+    width: 100%; /* Preenche a coluna → o gap da grade define o espaçamento */
 }
 
 .project-card:hover {
@@ -332,8 +333,9 @@ a:hover { opacity: 0.8; }
 
 .project-card img {
     width: 100%;
-    height: 260px;
-    object-fit: cover;
+    height: 260px;          /* Altura fixa mantém os cards uniformes */
+    object-fit: cover;      /* Preenche sem deformar */
+    object-position: center;/* Centraliza a imagem */
     display: block;
 }
 

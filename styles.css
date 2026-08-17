@@ -340,7 +340,7 @@ a:hover { opacity: 0.8; }
 }
 
 .project-info {
-    padding: 24px;
+    padding: 24px; /* 24px de respiro lateral (e vertical) para os textos do card */
     background-color: var(--off-white-bg);
 }
 
@@ -375,9 +375,10 @@ a:hover { opacity: 0.8; }
     color: #333333;
     font-weight: 600;
     font-size: 0.78rem;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 4px;
+    margin-left: auto; /* Mantém à direita, respeitando os 24px do padding do card */
 }
 
 .projects-center-btn {

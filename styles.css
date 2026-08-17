@@ -29,8 +29,8 @@ a:hover { opacity: 0.8; }
 
 /* Container só para conteúdo principal — não afeta header */
 .container {
-    padding-left: 190px;
-    padding-right: 190px;
+    padding-left: 280px;
+    padding-right: 280px;
     max-width: 100%; /* Não limita a tela inteira */
 }
 
@@ -55,8 +55,8 @@ a:hover { opacity: 0.8; }
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-left: 190px;
-    padding-right: 190px;
+    padding-left: 280px;
+    padding-right: 280px;
 }
 
 .logo {
@@ -101,8 +101,8 @@ a:hover { opacity: 0.8; }
     margin-right: 0;         /* Garante margem zero à direita */
     position: relative;
     
-    padding-left: 190px;
-    padding-right: 190px;
+    padding-left: 280px;
+    padding-right: 280px;
     padding-top: 48px;       /* Espaço no topo */
     padding-bottom: 0;
     
@@ -217,6 +217,17 @@ a:hover { opacity: 0.8; }
     transform: translateY(-1px);
 }
 
+/* No hero, o fundo é rosa claro e "engole" o halo rosa da sombra.
+   Sombra rosa mais intensa/clarificada para o "Vamos conversar" ter a
+   mesma intensidade percebida do "Enviar mensagem" no contato. */
+.hero .btn-dark {
+    box-shadow: 0 6px 14px rgba(255, 130, 160, 0.55);
+}
+
+.hero .btn-dark:hover {
+    box-shadow: 0 8px 18px rgba(255, 130, 160, 0.7);
+}
+
 .btn-pink {
     background-color: var(--pink-primary);
     color: var(--text-white);
@@ -236,8 +247,8 @@ a:hover { opacity: 0.8; }
     margin-top: 0;             /* Colado imediatamente abaixo do hero, sem margem */
     padding-top: 88px;         /* Distância vertical em cima do título */
     padding-bottom: 88px;      /* Distância vertical embaixo do último texto */
-    padding-left: 190px;       /* Mesmo alinhamento horizontal dos textos abaixo */
-    padding-right: 190px;
+    padding-left: 280px;       /* Mesmo alinhamento horizontal dos textos abaixo */
+    padding-right: 280px;
 }
 
 .process-content {
@@ -439,8 +450,8 @@ a:hover { opacity: 0.8; }
     background: linear-gradient(100deg, #0a0a0a 0%, #40222c 55%, #9e4a60 100%);
     padding-top: 96px;
     padding-bottom: 110px;
-    padding-left: 190px;
-    padding-right: 190px;
+    padding-left: 280px;
+    padding-right: 280px;
 }
 
 .contact-container {
@@ -508,7 +519,7 @@ a:hover { opacity: 0.8; }
 .footer {
     background-color: #050505;
     width: 100%;
-    padding: 32px 190px;
+    padding: 32px 280px;
     border-top: 1px solid #141414;
 }
 
@@ -541,11 +552,11 @@ a:hover { opacity: 0.8; }
 
 /* --- Responsividade --- */
 @media (max-width: 1200px) {
-    .container { padding-left: 60px; padding-right: 60px; }
-    .navbar-inner { padding-left: 60px; padding-right: 60px; }
-    .hero { padding-left: 60px; padding-right: 60px; }
-    .process-section, .contact-section { padding-left: 60px; padding-right: 60px; }
-    .footer { padding: 32px 60px; }
+    .container { padding-left: 100px; padding-right: 100px; }
+    .navbar-inner { padding-left: 100px; padding-right: 100px; }
+    .hero { padding-left: 100px; padding-right: 100px; }
+    .process-section, .contact-section { padding-left: 100px; padding-right: 100px; }
+    .footer { padding: 32px 100px; }
 }
 
 @media (max-width: 1100px) {
@@ -553,11 +564,11 @@ a:hover { opacity: 0.8; }
 }
 
 @media (max-width: 900px) {
-    .container { padding-left: 32px; padding-right: 32px; }
-    .navbar-inner { padding-left: 32px; padding-right: 32px; flex-direction: column; gap: 16px; }
-    .hero { padding-left: 32px; padding-right: 32px; }
-    .process-section, .contact-section { padding-left: 32px; padding-right: 32px; }
-    .footer { padding: 24px 32px; flex-direction: column; gap: 12px; }
+    .container { padding-left: 56px; padding-right: 56px; }
+    .navbar-inner { padding-left: 56px; padding-right: 56px; flex-direction: column; gap: 16px; }
+    .hero { padding-left: 56px; padding-right: 56px; }
+    .process-section, .contact-section { padding-left: 56px; padding-right: 56px; }
+    .footer { padding: 24px 56px; flex-direction: column; gap: 12px; }
     
     .hero {
         flex-direction: column;

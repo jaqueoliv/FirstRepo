@@ -190,29 +190,35 @@ a:hover { opacity: 0.8; }
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
+    box-shadow: 0 6px 14px rgba(206, 91, 120, 0.3); /* Drop shadow rosa suave e moderno */
+}
+
+.btn:hover {
+    box-shadow: 0 8px 18px rgba(206, 91, 120, 0.45); /* Sombra mais intensa no hover */
+    transform: translateY(-1px);
 }
 
 .btn-dark {
     background-color: #1a0a0f;
     color: var(--text-white);
-    box-shadow: 0 4px 16px rgba(206, 91, 120, 0.25); /* Drop shadow rosa suave */
+    box-shadow: 0 6px 14px rgba(206, 91, 120, 0.3);
 }
 
 .btn-dark:hover {
     background-color: #2a1018;
-    box-shadow: 0 6px 24px rgba(206, 91, 120, 0.35);
+    box-shadow: 0 8px 18px rgba(206, 91, 120, 0.45);
     transform: translateY(-1px);
 }
 
 .btn-pink {
     background-color: var(--pink-primary);
     color: var(--text-white);
-    box-shadow: 0 4px 16px rgba(206, 91, 120, 0.35); /* Drop shadow mais intenso */
+    box-shadow: 0 6px 14px rgba(206, 91, 120, 0.3);
 }
 
 .btn-pink:hover {
     background-color: var(--pink-secondary);
-    box-shadow: 0 6px 24px rgba(206, 91, 120, 0.45);
+    box-shadow: 0 8px 18px rgba(206, 91, 120, 0.45);
     transform: translateY(-1px);
 }
 

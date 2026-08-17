@@ -288,6 +288,7 @@ a:hover { opacity: 0.8; }
 
 /* --- Projects Section --- */
 .projects-section {
+    padding-top: 80px;        /* Respiro visual elegante após o painel cinza escuro */
     padding-bottom: 100px;
 }
 

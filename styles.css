@@ -95,18 +95,18 @@ a:hover { opacity: 0.8; }
     
     padding-left: 190px;
     padding-right: 190px;
-    padding-top: 36px;       /* Menor ainda no topo */
-    padding-bottom: 0px;    /* Zero embaixo para encostar totalment na foto */
+    padding-top: 48px;       /* Espaço no topo */
+    padding-bottom: 0;       /* Zero embaixo — fundo termina exatamente na base da foto */
     
-    background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%); /* Gradiente exato do protótipo */
-    border-radius: 0 0 20px 20px; /* Arredondamento de 20px apenas nas bordas inferiores */
+    background: linear-gradient(to right, #CE5B78 0%, #682E3D 100%); /* Degradê horizontal suave */
+    border-radius: 0 0 40px 40px; /* Arredondamento de 40px apenas nas bordas inferiores */
 }
 
 .hero-inner {
     display: flex;
-    align-items: center; /* Centraliza os textos verticalmente */
+    align-items: center; /* Centraliza textos verticalmente no retângulo rosa */
     gap: 40px;
-    width: 100%; /* Mesma largura usada pelo resto do conteúdo */
+    width: 100%;
 }
 
 .hero-text {
@@ -115,9 +115,10 @@ a:hover { opacity: 0.8; }
 }
 
 .greeting {
-    font-size: 1rem;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
     color: var(--text-white);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 400;
 }
 
@@ -130,12 +131,13 @@ a:hover { opacity: 0.8; }
 }
 
 .hero h2 {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    font-weight: 500;
-    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
 }
 
 .hero-description {
@@ -146,21 +148,19 @@ a:hover { opacity: 0.8; }
     line-height: 1.7;
 }
 
-/* Garante que a foto fique grande e ocupando do topo até o fundo da hero */
 .hero-image {
-    flex-basis: 58%;       /* Mais espaço para a foto ficar bem grande */
-    text-align: right;
-    height: 100%;          /* Ocupa toda a altura disponível na hero */
-    display: flex;         /* Facilita alinhar a imagem */
-    align-items: center;   /* Centraliza verticalmente dentro da seção */
+    flex-basis: 58%;       /* Espaço da foto (mesmo do protótipo) */
+    display: flex;
+    justify-content: flex-end; /* Foto alinhada à direita dentro do container */
+    align-items: center;   /* Centraliza verticalmente no retângulo rosa */
 }
 
 .hero-image img {
-    width: 100%;           /* Ocupa tudo que tem à direita */
-    max-width: 650px;      /* Aumenta bastante o tamanho da foto */
-    height: auto;          /* Mantém proporção */
+    width: 100%;           /* Ocupa o espaço disponível */
+    max-width: 650px;      /* Tamanho final da foto conforme protótipo */
+    height: auto;          /* Mantém proporção original */
     border-radius: 0;
-    object-fit: cover;     /* Preenche bem sem distorcer */
+    object-fit: cover;
 }
 
 /* --- Botões com Drop Shadow --- */
@@ -201,18 +201,23 @@ a:hover { opacity: 0.8; }
     transform: translateY(-1px);
 }
 
-/* --- Process Section - Como eu trabalho --- */
+/* --- Process Section - Como eu trabalho (painel escuro em 100% da largura) --- */
 .process-section {
-    padding-bottom: 120px;
+    width: 100%;
+    background-color: #141414; /* Cinza bem escuro, ocupa toda a largura */
+    padding-top: 88px;         /* Distância vertical em cima do título */
+    padding-bottom: 88px;      /* Distância vertical embaixo do último texto */
+    padding-left: 190px;       /* Mesmo alinhamento horizontal dos textos abaixo */
+    padding-right: 190px;
 }
 
 .process-content {
     display: flex;
-    gap: 60px;
+    gap: 40px;
 }
 
 .process-intro {
-    width: 40%;
+    width: 35%;
     flex-shrink: 0;
 }
 
@@ -228,13 +233,14 @@ a:hover { opacity: 0.8; }
     font-size: 0.85rem;
     line-height: 1.8;
     margin-bottom: 16px;
+    max-width: 300px; /* Texto mais estreito e longo igual na imagem */
 }
 
 .process-grid {
-    width: 60%;
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 36px 56px;
 }
 
 .process-card {
@@ -316,7 +322,20 @@ a:hover { opacity: 0.8; }
     font-family: var(--font-heading);
     font-size: 1.1rem;
     color: #1a1a1a;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--pink-primary);
+    background-color: rgba(206, 91, 120, 0.12);
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
 }
 
 .project-tagline {
@@ -375,10 +394,14 @@ a:hover { opacity: 0.8; }
     font-weight: 500;
 }
 
-/* --- Contact Section - Fundo com gradiente escuro a rosa --- */
+/* --- Contact Section - Fundo com gradiente escuro a rosa, em 100% da largura --- */
 .contact-section {
-    padding-top: 40px;
-    padding-bottom: 120px;
+    width: 100%;
+    background: linear-gradient(100deg, #0a0a0a 0%, #40222c 55%, #9e4a60 100%);
+    padding-top: 96px;
+    padding-bottom: 110px;
+    padding-left: 190px;
+    padding-right: 190px;
 }
 
 .contact-container {

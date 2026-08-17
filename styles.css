@@ -117,7 +117,7 @@ a:hover { opacity: 0.8; }
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, #CE5B78 0%, #682E3D 100%);
+    background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%);
     border-radius: 0 0 40px 40px;
     z-index: 0;
 }

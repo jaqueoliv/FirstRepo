@@ -217,17 +217,6 @@ a:hover { opacity: 0.8; }
     transform: translateY(-1px);
 }
 
-/* No hero, o fundo é rosa claro e "engole" o halo rosa da sombra.
-   Sombra rosa mais intensa/clarificada para o "Vamos conversar" ter a
-   mesma intensidade percebida do "Enviar mensagem" no contato. */
-.hero .btn-dark {
-    box-shadow: 0 6px 14px rgba(255, 130, 160, 0.55);
-}
-
-.hero .btn-dark:hover {
-    box-shadow: 0 8px 18px rgba(255, 130, 160, 0.7);
-}
-
 .btn-pink {
     background-color: var(--pink-primary);
     color: var(--text-white);

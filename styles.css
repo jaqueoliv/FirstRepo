@@ -416,6 +416,10 @@ a:hover { opacity: 0.8; }
     font-size: 1.8rem;
     margin-bottom: 24px;
     color: var(--text-white);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Título alinhado à esquerda, igual ao texto abaixo */
 }
 
 .about-content p {
@@ -447,6 +451,7 @@ a:hover { opacity: 0.8; }
 .contact-container {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Alinha o bloco de texto na vertical, em relação ao formulário */
     gap: 80px;
 }
 
@@ -456,7 +461,7 @@ a:hover { opacity: 0.8; }
 
 .contact-text h2 {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     margin-bottom: 16px;
     color: var(--text-white);
     font-style: italic; /* Título em itálico (DM Serif Display já tem itálico carregado) */
@@ -464,9 +469,9 @@ a:hover { opacity: 0.8; }
 
 .contact-text p {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.8;
-    max-width: 380px;
+    max-width: 480px;
     font-style: italic; /* Texto em itálico (DM Sans com itálico carregado) */
 }
 

@@ -586,6 +586,34 @@ a:hover { opacity: 0.8; }
     .contact-form { width: 100%; }
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .hero-inner {
+        flex-direction: column;      /* Texto em cima, imagem embaixo */
+        text-align: center;
+        align-items: center;         /* Centraliza tudo, simétrico no celular */
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .hero-image {
+        justify-content: center;     /* Imagem centralizada em vez de à direita */
+    }
+
+    .hero-image img {
+        width: 180px;                /* Tamanho compacto no mobile */
+        height: 180px;
+        border-radius: 50%;          /* Foto arredondada */
+        object-fit: cover;
+        object-position: center;     /* Rosto centralizado, sem corte feio */
+        margin-bottom: 20px;         /* Espaçamento abaixo da foto */
+    }
+}
+
 @media (max-width: 600px) {
     .navbar nav ul { gap: 16px; font-size: 0.65rem; }
     .hero h1 { font-size: 2rem; }

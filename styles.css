@@ -602,6 +602,8 @@ a:hover { opacity: 0.8; }
 
     .hero-image {
         justify-content: center;     /* Imagem centralizada em vez de à direita */
+        order: -1;                   /* Coloca a foto antes do texto */
+        margin-bottom: 20px;         /* Espaço entre foto e texto */
     }
 
     .hero-image img {
@@ -610,7 +612,6 @@ a:hover { opacity: 0.8; }
         border-radius: 50%;          /* Foto arredondada */
         object-fit: cover;
         object-position: center;     /* Rosto centralizado, sem corte feio */
-        margin-bottom: 20px;         /* Espaçamento abaixo da foto */
     }
 }
 

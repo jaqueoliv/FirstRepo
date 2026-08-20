@@ -439,27 +439,39 @@ a:hover { opacity: 0.8; }
 }
 
 /* --- Contact Section - Fundo com gradiente escuro a rosa, em 100% da largura --- */
-/* --- Contato Elegante + Rodapé com Pontinhos --- */
+/* --- Fundo Rosa Ocupando Tudo --- */
 .contact-section {
-    background: linear-gradient(135deg, #CE5B78 0%, #a43a58 100%); /* Fundo Rosa Degradê */
-    padding-top: 120px;        /* Espaço bem maior no topo pra separar do conteúdo de cima */
-    padding-bottom: 100px;     /* Espaço antes do rodapé */
-    padding-left: 190px;       /* Mantém sua margem lateral padrão */
-    padding-right: 190px;
+    background: linear-gradient(135deg, #CE5B78 0%, #a43a58 100%);
+    
+    /* LARGURA TOTAL (Tira margens laterais pro fundo) */
+    width: 100%;
+    padding-left: 0;          
+    padding-right: 0;         
+    margin-left: 0;           /* Garante que encosta na parede esquerda */
+    margin-right: 0;          /* Garante que encosta na parede direita */
+    
+    /* Espaço só no topo e embaixo (pra respirar) */
+    padding-top: 140px;       
+    padding-bottom: 120px;
 }
 
+/* --- Conteúdo Empurrado pro Meio (Margem de 350px) --- */
 .contact-container-elegant {
-    display: flex; /* Coloca lado a lado */
-    justify-content: space-between; /* Espalha na tela */
-    align-items: flex-start;        /* Alinha no topo pra não ficar solto */
-    gap: 80px;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Mantém separados lado a lado */
+    align-items: flex-start;
+    
+    /* AQUI ESTÁ O SEGREDO DOS 350PX */
+    padding-left: 350px;      /* Empurra o texto pra dentro da esquerda */
+    padding-right: 350px;     /* Empurra os botões pra dentro da direita */
+    
+    max-width: 1400px;        /* Evita que vá muito longe se a tela for absurda */
+    margin: 0 auto;           /* Centraliza o bloco na tela */
 }
 
 .contact-info-left h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #ffffff;
     margin-bottom: 16px;
 }
@@ -468,20 +480,20 @@ a:hover { opacity: 0.8; }
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
-    max-width: 400px; /* Mantém o texto compacto */
+    max-width: 450px;
 }
 
 /* Botão do Zap Escuro e Elegante */
 .btn-whatsapp-main {
     display: inline-block;
-    padding: 12px 32px;
-    background-color: #1a0d13; /* Fundo escuro */
+    padding: 14px 36px; /* Deixei um pouquinho maior */
+    background-color: #1a0d13;
     color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Sombra pra destacar */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     margin-bottom: 16px;
     transition: transform 0.2s;
 }
@@ -489,7 +501,6 @@ a:hover { opacity: 0.8; }
 .btn-whatsapp-main:hover { transform: translateY(-2px); }
 
 /* Texto do Email direto */
-.email-direct-link { text-align: left; }
 .email-direct-link span {
     display: block;
     font-size: 0.9rem;
@@ -499,9 +510,9 @@ a:hover { opacity: 0.8; }
 
 .email-direct-link a {
     color: #ffffff;
-    text-decoration: underline; /* Linhadinha sutil */
-    font-weight: 500;
+    text-decoration: underline; 
     font-size: 1rem;
+}
 }
 
 /* --- Rodapé Limpo com Pontinhos --- */

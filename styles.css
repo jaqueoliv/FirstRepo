@@ -439,79 +439,108 @@ a:hover { opacity: 0.8; }
 }
 
 /* --- Contact Section - Fundo com gradiente escuro a rosa, em 100% da largura --- */
+/* --- Contato Elegante + Rodapé com Pontinhos --- */
 .contact-section {
-    width: 100%;
-    background: linear-gradient(100deg, #0a0a0a 0%, #40222c 55%, #9e4a60 100%);
-    padding-top: 96px;
-    padding-bottom: 110px;
-    padding-left: 280px;
-    padding-right: 280px;
+    background: linear-gradient(135deg, #CE5B78 0%, #a43a58 100%); /* Fundo Rosa Degradê */
+    padding-top: 120px;        /* Espaço bem maior no topo pra separar do conteúdo de cima */
+    padding-bottom: 100px;     /* Espaço antes do rodapé */
+    padding-left: 190px;       /* Mantém sua margem lateral padrão */
+    padding-right: 190px;
 }
 
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Alinha o bloco de texto na vertical, em relação ao formulário */
+.contact-container-elegant {
+    display: flex; /* Coloca lado a lado */
+    justify-content: space-between; /* Espalha na tela */
+    align-items: flex-start;        /* Alinha no topo pra não ficar solto */
     gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.contact-text {
-    width: 45%;
-}
-
-.contact-text h2 {
-    font-family: var(--font-heading);
-    font-size: 2.4rem;
+.contact-info-left h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    color: #ffffff;
     margin-bottom: 16px;
-    color: var(--text-white);
-    font-style: italic; /* Título em itálico (DM Serif Display já tem itálico carregado) */
 }
 
-.contact-text p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 480px;
-    font-style: italic; /* Texto em itálico (DM Sans com itálico carregado) */
+.contact-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 400px; /* Mantém o texto compacto */
 }
 
-.contact-form {
-    width: 50%;
+/* Botão do Zap Escuro e Elegante */
+.btn-whatsapp-main {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: #1a0d13; /* Fundo escuro */
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Sombra pra destacar */
+    margin-bottom: 16px;
+    transition: transform 0.2s;
+}
+
+.btn-whatsapp-main:hover { transform: translateY(-2px); }
+
+/* Texto do Email direto */
+.email-direct-link { text-align: left; }
+.email-direct-link span {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4px;
+}
+
+.email-direct-link a {
+    color: #ffffff;
+    text-decoration: underline; /* Linhadinha sutil */
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* --- Rodapé Limpo com Pontinhos --- */
+.footer-clean {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    justify-content: space-between; /* Texto na esquerda, links na direita */
+    align-items: center;
+    padding: 24px 190px; /* Margem igual o resto do site */
+    background-color: #0a0a0a; /* Fundo preto */
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 14px 20px;
-    border-radius: 8px;
-    border: none;
-    background-color: var(--text-white);
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    color: #1a1a1a;
-    resize: vertical;
-    outline: none;
-    transition: box-shadow 0.3s ease;
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espaço entre links e pontinhos */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #999999;
-    font-size: 0.82rem;
+.footer-right a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    box-shadow: 0 0 0 3px rgba(206, 91, 120, 0.2);
-}
+.footer-right a:hover { color: #ffffff; }
 
-.contact-form button {
-    align-self: flex-start;
-    margin-top: 4px;
-}
+/* O pontinho (•) */
+.dot { color: rgba(255, 255, 255, 0.4); }
 
+/* Responsividade pro Celular (Coloca um em cima do outro) */
+@media (max-width: 900px) {
+    .contact-container-elegant { flex-direction: column; text-align: center; }
+    .email-direct-link { text-align: center; margin-top: 20px; }
+    
+    .footer-clean { flex-direction: column; gap: 16px; text-align: center; padding: 30px 24px; }
+}
 /* --- Footer --- */
 .footer {
     background-color: #050505;

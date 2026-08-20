@@ -477,10 +477,13 @@ a:hover { opacity: 0.8; }
 }
 
 .contact-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 450px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;        /* Tamanho exato do Figma */
+    line-height: 1.6;       /* Legibilidade elegante */
+    
+    /* Branco bem claro (quase branco) mas não o #ffffff puro */
+    color: #f2f2f2;         
+    font-weight: 300;       /* Leve e sofisticado */
 }
 
 /* Botão do Zap Escuro e Elegante */

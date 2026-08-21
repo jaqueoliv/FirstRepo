@@ -691,3 +691,31 @@ a:hover { opacity: 0.8; }
     .process-grid { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
 }
+/* Centraliza botão + email: um embaixo do outro e alinhados ao meio */
+.contact-action-right {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    width: fit-content !important;   /* ajusta a largura só pro que tem dentro */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 36px !important;
+}
+
+/* Bloco do email centralizado sob o botão */
+.email-direct-link {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; /* as duas linhas começam na mesma borda esquerda */
+    margin-top: 8px !important;
+    width: fit-content !important;
+}
+
+/* Linhas individuais de texto e link */
+.email-direct-link span,
+.email-direct-link a {
+    display: inline-block !important;
+    direction: ltr !important;       /* leitura esquerda → direita */
+    text-align: left !important;
+}

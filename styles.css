@@ -469,9 +469,8 @@ a:hover { opacity: 0.8; }
 .contact-container-elegant {
     display: flex;
     justify-content: space-between; /* Mantém separados lado a lado */
-    align-items: flex-start;        /* Colunas alinhadas pelo topo, como no protótipo */
+    align-items: center;            /* Colunas centralizadas na vertical entre si */
     width: 100%;
-    height: 100%;                   /* Preenche a altura da seção → o center do pai funciona */
 
     /* Mesma margem horizontal dos demais textos da página (280px no desktop) */
     padding-left: 280px;

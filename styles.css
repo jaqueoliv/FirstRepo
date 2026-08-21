@@ -455,9 +455,10 @@ a:hover { opacity: 0.8; }
     margin-left: 0;           /* Garante que encosta na parede esquerda */
     margin-right: 0;          /* Garante que encosta na parede direita */
     
-    /* Espaço só no topo e embaixo (pra respirar) */
-    padding-top: 140px;       
-    padding-bottom: 120px;
+    /* Padding SIMÉTRICO no topo/embaixo — garante que o centro da caixa
+       de conteúdo coincida com o centro exato do retângulo rosa */
+    padding-top: 110px;       
+    padding-bottom: 110px;
 
     /* Centra todo o conteúdo na vertical dentro do retângulo rosa */
     display: flex;
@@ -470,6 +471,7 @@ a:hover { opacity: 0.8; }
     justify-content: space-between; /* Mantém separados lado a lado */
     align-items: flex-start;        /* Colunas alinhadas pelo topo, como no protótipo */
     width: 100%;
+    height: 100%;                   /* Preenche a altura da seção → o center do pai funciona */
 
     /* Mesma margem horizontal dos demais textos da página (280px no desktop) */
     padding-left: 280px;

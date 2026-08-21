@@ -499,7 +499,7 @@ a:hover { opacity: 0.8; }
 
 /* Botão do Zap — idêntico ao "Vamos conversar" (herda os estilos de .btn .btn-dark) */
 .btn-whatsapp-main {
-    margin-top: 36px;    /* Desce um pouco em relação ao topo, como no protótipo */
+    /* Sem margin-top: o bloco inteiro é centralizado na vertical pelo flex da seção */
     margin-bottom: 40px; /* Espaço até o bloco de email */
 }
 
@@ -706,7 +706,7 @@ a:hover { opacity: 0.8; }
     width: fit-content !important;   /* ajusta a largura só pro que tem dentro */
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-top: 36px !important;
+    /* Sem margin-top: centraliza na vertical junto com a coluna da esquerda */
 }
 
 /* Bloco do email centralizado sob o botão */

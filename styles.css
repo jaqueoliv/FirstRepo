@@ -458,17 +458,22 @@ a:hover { opacity: 0.8; }
     /* Espaço só no topo e embaixo (pra respirar) */
     padding-top: 140px;       
     padding-bottom: 120px;
+
+    /* Centra todo o conteúdo na vertical dentro do retângulo rosa */
+    display: flex;
+    align-items: center;
 }
 
-/* --- Conteúdo Empurrado pro Meio (Margem de 350px) --- */
+/* --- Conteúdo alinhado com a margem do texto acima (mesmo padding do .container) --- */
 .contact-container-elegant {
     display: flex;
     justify-content: space-between; /* Mantém separados lado a lado */
     align-items: flex-start;        /* Colunas alinhadas pelo topo, como no protótipo */
+    width: 100%;
 
-    /* Margens proporcionais — no protótipo (1920px) ficam ~470px de cada lado */
-    padding-left: 24%;
-    padding-right: 24%;
+    /* Mesma margem horizontal dos demais textos da página (280px no desktop) */
+    padding-left: 280px;
+    padding-right: 280px;
 }
 
 .contact-info-left h2 {
@@ -601,7 +606,7 @@ a:hover { opacity: 0.8; }
     .navbar-inner { padding-left: 100px; padding-right: 100px; }
     .hero { padding-left: 100px; padding-right: 100px; }
     .process-section { padding-left: 100px; padding-right: 100px; }
-    .contact-container-elegant { padding-left: 14%; padding-right: 14%; }
+    .contact-container-elegant { padding-left: 100px; padding-right: 100px; }
     .footer { padding: 32px 100px; }
     .footer-clean { padding: 30px 13%; }
 }
@@ -621,8 +626,8 @@ a:hover { opacity: 0.8; }
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 56px;
+        padding-right: 56px;
         gap: 40px;
     }
     .contact-description { margin: 0 auto; }

@@ -445,8 +445,8 @@ a:hover { opacity: 0.8; }
 /* --- Contact Section - Fundo com gradiente escuro a rosa, em 100% da largura --- */
 /* --- Fundo Rosa Ocupando Tudo --- */
 .contact-section {
-    /* Degradê igual ao protótipo: escuro à esquerda, mais claro no centro/direita */
-    background: radial-gradient(120% 160% at 68% 42%, #f07ca3 0%, #d9627f 32%, #ab4762 58%, #6f2b3c 82%, #5a2130 100%);
+    /* Mesmo linear do hero: rosa mais fechado com lado direito mais escuro */
+    background: linear-gradient(to right, #CE5B78 0%, #B14E67 24%, #682E3D 90%);
     
     /* LARGURA TOTAL (Tira margens laterais pro fundo) */
     width: 100%;

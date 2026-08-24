@@ -465,16 +465,17 @@ a:hover { opacity: 0.8; }
     align-items: center;
 }
 
-/* --- Conteúdo alinhado com a margem do texto acima (mesmo padding do .container) --- */
+/* --- Área interna de conteúdo: margem horizontal de 350px dos dois lados
+     (mantém título, texto, botão e email alinhados com o texto "Sobre mim" acima) --- */
 .contact-container-elegant {
     display: flex;
     justify-content: space-between; /* Mantém separados lado a lado */
     align-items: center;            /* Colunas centralizadas na vertical entre si */
-    width: 100%;
 
-    /* Margem horizontal da área de contato (350px no desktop) */
-    padding-left: 350px;
-    padding-right: 350px;
+    /* Margem horizontal de 350px à esquerda e à direita (desktop) */
+    width: calc(100% - 700px);
+    margin-left: 350px;
+    margin-right: 350px;
 }
 
 .contact-info-left h2 {
@@ -607,7 +608,7 @@ a:hover { opacity: 0.8; }
     .navbar-inner { padding-left: 100px; padding-right: 100px; }
     .hero { padding-left: 100px; padding-right: 100px; }
     .process-section { padding-left: 100px; padding-right: 100px; }
-    .contact-container-elegant { padding-left: 100px; padding-right: 100px; }
+    .contact-container-elegant { width: calc(100% - 200px); margin-left: 100px; margin-right: 100px; }
     .footer { padding: 32px 100px; }
     .footer-clean { padding: 30px 13%; }
 }
@@ -627,8 +628,9 @@ a:hover { opacity: 0.8; }
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-left: 56px;
-        padding-right: 56px;
+        width: calc(100% - 112px);
+        margin-left: 56px;
+        margin-right: 56px;
         gap: 40px;
     }
     .contact-description { margin: 0 auto; }

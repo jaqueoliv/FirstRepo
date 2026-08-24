@@ -472,9 +472,9 @@ a:hover { opacity: 0.8; }
     align-items: center;            /* Colunas centralizadas na vertical entre si */
     width: 100%;
 
-    /* Mesma margem horizontal dos demais textos da página (280px no desktop) */
-    padding-left: 280px;
-    padding-right: 280px;
+    /* Margem horizontal da área de contato (350px no desktop) */
+    padding-left: 350px;
+    padding-right: 350px;
 }
 
 .contact-info-left h2 {
@@ -500,7 +500,7 @@ a:hover { opacity: 0.8; }
 /* Botão do Zap — idêntico ao "Vamos conversar" (herda os estilos de .btn .btn-dark) */
 .btn-whatsapp-main {
     /* Sem margin-top: o bloco inteiro é centralizado na vertical pelo flex da seção */
-    margin-bottom: 40px; /* Espaço até o bloco de email */
+    margin-bottom: 18px; /* Mesma distância do título "Como posso te ajudar?" até o texto */
 }
 
 /* Texto do Email direto */
@@ -714,7 +714,7 @@ a:hover { opacity: 0.8; }
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important; /* as duas linhas começam na mesma borda esquerda */
-    margin-top: 8px !important;
+    margin-top: 0 !important; /* toda a distância vem do margin-bottom do botão (18px) */
     width: fit-content !important;
 }
 

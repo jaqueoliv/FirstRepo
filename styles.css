@@ -330,11 +330,13 @@ a:hover { opacity: 0.8; }
 }
 
 .project-card {
+    position: relative; /* Referência p/ overlay de clique em todo o card */
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--off-white-bg); /* Fundo claro */
     width: 100%; /* Preenche a coluna → o gap da grade define o espaçamento */
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -388,6 +390,8 @@ a:hover { opacity: 0.8; }
 }
 
 .project-link {
+    position: relative;
+    z-index: 1;
     color: #333333;
     font-weight: 600;
     font-size: 0.78rem;
@@ -395,6 +399,14 @@ a:hover { opacity: 0.8; }
     align-items: center;
     gap: 4px;
     margin-left: auto; /* Mantém à direita, respeitando os 24px do padding do card */
+}
+
+/* Estende a área de clique do link para cobrir TODO o card */
+.project-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1; /* Fica atrás do conteúdo, mas por cima do card */
 }
 
 .projects-center-btn {

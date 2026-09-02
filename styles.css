@@ -390,8 +390,6 @@ a:hover { opacity: 0.8; }
 }
 
 .project-link {
-    position: relative;
-    z-index: 1;
     color: #333333;
     font-weight: 600;
     font-size: 0.78rem;
@@ -401,12 +399,14 @@ a:hover { opacity: 0.8; }
     margin-left: auto; /* Mantém à direita, respeitando os 24px do padding do card */
 }
 
-/* Estende a área de clique do link para cobrir TODO o card */
+/* Estende a área de clique do link para cobrir TODO o card.
+   O link NÃO é posicionado de propósito: assim o ::after fica
+   ancorado no .project-card (position: relative) e cobre o card inteiro. */
 .project-link::after {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1; /* Fica atrás do conteúdo, mas por cima do card */
+    z-index: 1; /* Por cima do conteúdo do card → qualquer clique cai no link */
 }
 
 .projects-center-btn {
@@ -718,6 +718,10 @@ a:hover { opacity: 0.8; }
         border-radius: 50%;          /* Foto arredondada */
         object-fit: cover;
         object-position: center;     /* Rosto centralizado, sem corte feio */
+        border: 1px solid rgba(255, 255, 255, 0.35); /* Círculo bem suave, quase difuso */
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.35), /* Anel branco desfocado (halo suave) */
+                    0 0 28px 10px rgba(255, 255, 255, 0.12), /* Difusão extra pra suavizar ainda mais */
+                    0 8px 24px rgba(0, 0, 0, 0.30);          /* Sombra leve para a foto não flutuar */
     }
 }
 
